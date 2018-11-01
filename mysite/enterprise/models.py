@@ -3,10 +3,9 @@ from django.contrib.auth.models import User
 
 # Create your models here.
 class ApplyBuffer(models.Model):
-    title = models.CharField(max_length=100, blank=True, null=True)
-    url = models.URLField('url', unique=True)
-    url_category = models.CharField(max_length=100, blank=True, null=True)
-    owner = models.ForeignKey(User, null=True, on_delete=models.CASCADE)
+    request_date = models.DateTimeField('Request Date', auto_now=True)
+    indi_id = models.ForeignKey(User, related_name='individual_id', null=False, on_delete=models.CASCADE)
+    ent_id = models.ForeignKey(User, related_name='enterprise_id', null=False, on_delete=models.CASCADE)
 
-    def __str__(self):
-        return self.title
+class BlockChain(models.Model):
+    pass
