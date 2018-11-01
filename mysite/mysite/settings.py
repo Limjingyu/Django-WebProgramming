@@ -23,9 +23,7 @@ LOGIN_REDIRECT_URL = '/'
 # See https://docs.djangoproject.com/en/2.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-f = open("C:\work-django\config.txt", 'r')
-SECRET_KEY = f.readline()
-f.close()
+SECRET_KEY = "1v&$kxf-%e45!o7yq)wykr@d8+9z7ix%@v8a22w2y*%oohb6xw"
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -42,6 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'enterprise'
 ]
 
 MIDDLEWARE = [
