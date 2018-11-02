@@ -27,7 +27,7 @@
                     <a href="{% url 'logout' %}">Logout</a>
         </h4>
     {% else %}
-        <h4 class="welcome">Welcome, Anonymous /
+        <h4 class="welcome">Welcome, here is shinabro /
                     <a href="{% url 'login' %}">Login</a> /
                     <a href="{% url 'register' %}">Register</a>
         </h4>
@@ -35,13 +35,29 @@
 </div>
 
 <div id="menu">
-    <li><a href="{% url 'home' %}">&nbsp;HOME</a></li>
-    <li><a href="#">|&nbsp;OUR STORYE</a></li>
-    <!-- <li><a href="#">Blog</a></li>
-    <li><a href="#">Photo</a></li> -->
+    {% if user.is_active %}
+        {% if user.last_name == 'company' %}
+            
+            <li><a href="{% url 'home' %}">&nbsp;HOME</a></li>
+            <li><a href="#">|&nbsp;OUR STORYE</a></li>
+            <li><a href="#">|&nbsp;REQUESTED LIST</a></li>
+            <li><a href="#">|&nbsp;APPROVE LIST</a></li>
+            <!-- <li><a href="#">Blog</a></li>
+            <li><a href="#">Photo</a></li> -->
+        {% else %}
+           <li><a href="{% url 'home' %}">&nbsp;HOME</a></li>
+            <li><a href="#">|&nbsp;OUR STORYE</a></li>
+            <li><a href="#">|&nbsp;REQUEST </a></li>
+            <li><a href="#">|&nbsp;MY LIST</a></li>
+        {% endif %}
+    {% else %}
+        <li><a href="{% url 'home' %}">&nbsp;HOME</a></li>
+        <li><a href="#">|&nbsp;OUR STORYE</a></li>
+        <li><a href="#">|&nbsp;INDIVIDUAL</a></li>
+        <li><a href="#">|&nbsp;ENTERPRISE</a></li>
+        
 
-    <li><a href="#">|&nbsp;INDIVISUALE</a></li>
-    <li><a href="#">|&nbsp;COMPANYE</a></li>
+    {% endif %}
 <!-- 
     <li><a href="#">Archive</a></li>
     <li><a href="#">Search</a></li> -->
