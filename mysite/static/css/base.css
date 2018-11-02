@@ -1,41 +1,56 @@
 body {
     font-family: "Lucida Grande", Verdana, Arial, sans-serif;
     font-size: 14px;
+    background-color: black;
 }
 
 /* PAGE STRUCTURE */
+
+div#logo {
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    left: 44%;
+    top: 20px;
+    height: 70px;
+    background-color: black;
+    
+}
 div#header {
     position: absolute;
-    top: 0px;
+    top: 70px;
     left: 0px;
-    height: 80px;
+    height: 65px;
     width: 100%;
+    
+    
     display: table;
     background: black;
 }
 
 div#menu {
     position: absolute;
-    top: 80px;
-    left: 0px;
-    height: 20px;
-    width: 100%;
-    display: table;
-    table-layout: fixed;
-    border-spacing: 40px 0px;
+    top: 120px;
+    height: 40px;
+    width: 34%;
+    display: table; 
+    table-layout: table;
     background: black;
     font-size: 12px;
+    
 }
 
 div#content {
     position: absolute;
-    top: 100px;
+    top: 150px;
     left: 50px;
+    
     right: 50px;
 }
 
 div#footer {
     position: absolute;
+    top: 1000px;
     bottom: 20px;
     left: 50px;
     right: 50px;
@@ -44,14 +59,14 @@ div#footer {
 }
 
 /* HEADER */
-.maintitle {
+/* .maintitle {
     display: table-cell;
     vertical-align: middle;
     padding-left: 20px;
     color: white;
     font-weight: bold;
     font-size: 16px;
-}
+} */
 
 .welcome {
     display: table-cell;
@@ -81,7 +96,7 @@ div#menu > li {
     font-weight: bold;
 }
 
-/* pulldown menu */
+/* pulldown menu
 div#menu li  ul {
     display:none;
     position:absolute;
@@ -93,7 +108,7 @@ div#menu li  ul {
     border-bottom: 1px solid black;
     background: black;
     z-index: 1;
-}
+} */
 
 div#menu li:hover ul {
     display:block;

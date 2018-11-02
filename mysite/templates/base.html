@@ -7,13 +7,20 @@
 {% load staticfiles %}
 <link rel="stylesheet" type="text/css" href="{% block stylesheet %}{% static "css/base.css" %}{% endblock %}" />
 <link rel="stylesheet" type="text/css" href="{% block extrastyle %}{% endblock %}" />
+<a class="navbar-brand" href="#">
+          
 
 </head>
 
 <body>
 
+
+<div id="logo">
+    <img src="{% static 'img/blockchainlogo.jpg' %}" width="180" height="50" alt=""></a>
+</div>
 <div id="header">
-    <h2 class="maintitle">Easy&amp;Proof of Career</h2>
+    
+    <!-- <h2 class="maintitle">Easy&amp;Proof of Career</h2> -->
     {% if user.is_active %}
         <h4 class="welcome">Welcome, <strong>{% firstof usr.get_short_name user.get_username %}</strong> /
                     <a href="{% url 'password_change' %}">Change Password</a> /
@@ -28,30 +35,19 @@
 </div>
 
 <div id="menu">
-    <li><a href="{% url 'home' %}">Home</a></li>
-    <li><a href="#">OUR STORY</a></li>
+    <li><a href="{% url 'home' %}">&nbsp;HOME</a></li>
+    <li><a href="#">|&nbsp;OUR STORYE</a></li>
     <!-- <li><a href="#">Blog</a></li>
     <li><a href="#">Photo</a></li> -->
 
-    <li><a href="#">INDIVISUAL&dtrif;&bigtriangledown;</a>
-        <ul>
-            <li><a href="#">OUR SERVICE</a></li>
-            <li><a href="#">REQUEST</a></li>
-	        <li><a href="#">MY LIST</a></li>
-        </ul>
-    </li>
-    <li><a href="#">COMPANY&dtrif;&bigtriangledown;</a>
-        <ul>
-            <li><a href="#">OUR SERVICE</a></li>
-            <li><a href="#">REQUEST LIST</a></li>
-	        <li><a href="#">CONFIRM LIST</a></li>
-        </ul>
-    </li>
+    <li><a href="#">|&nbsp;INDIVISUALE</a></li>
+    <li><a href="#">|&nbsp;COMPANYE</a></li>
 <!-- 
     <li><a href="#">Archive</a></li>
     <li><a href="#">Search</a></li> -->
     <!-- <li><a href="{% url 'admin:index' %}">Admin</a></li> -->
 </div>
+
 
 {% block content %}{% endblock %}
 
