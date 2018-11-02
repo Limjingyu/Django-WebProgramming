@@ -35,17 +35,26 @@
 </div>
 
 <div id="menu">
-    <li><a href="{% url 'home' %}">&nbsp;HOME</a></li>
-    <li><a href="#">|&nbsp;OUR STORYE</a></li>
-    <!-- <li><a href="#">Blog</a></li>
-    <li><a href="#">Photo</a></li> -->
+    {% if user.is_active %}
+        {% if user.individual %}
+            <li><a href="{% url 'home' %}">&nbsp;HOME</a></li>
+            <li><a href="#">|&nbsp;REQUEST</a></li>
+            <li><a href="#">|&nbsp;MY LIST</a></li>
+        {%else %}
+            <li><a href="{% url 'home' %}">&nbsp;HOME</a></li>
+            <li><a href="#">|&nbsp;REQUESTED_LIST</a></li>
+            <li><a href="#">|&nbsp;RECEIVE LIST</a></li>
+        {% endif %}
+        </h4>
+    {% else %}
+        <li><a href="{% url 'home' %}">&nbsp;HOME</a></li>
+        <li><a href="#">|&nbsp;OUR STORYE</a></li>
+        <li><a href="#">|&nbsp;INDIVISUALE</a></li>
+        <li><a href="#">|&nbsp;COMPANYE</a></li>
+    {% endif %}
 
-    <li><a href="#">|&nbsp;INDIVISUALE</a></li>
-    <li><a href="#">|&nbsp;COMPANYE</a></li>
-<!-- 
-    <li><a href="#">Archive</a></li>
-    <li><a href="#">Search</a></li> -->
-    <!-- <li><a href="{% url 'admin:index' %}">Admin</a></li> -->
+    
+
 </div>
 
 
