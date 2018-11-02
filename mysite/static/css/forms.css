@@ -18,6 +18,7 @@ fieldset {
     display: block;
     padding: 3px 10px 0 0;
     float: left;
+    color: white;
 }
 
 .form-row {

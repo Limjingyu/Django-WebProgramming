@@ -2,6 +2,7 @@ body {
     font-family: "Lucida Grande", Verdana, Arial, sans-serif;
     font-size: 14px;
     background-color: black;
+    color: white;
 }
 
 /* PAGE STRUCTURE */
@@ -44,6 +45,8 @@ div#content {
     position: absolute;
     top: 150px;
     left: 50px;
+    color: white!important;
+    
     
     right: 50px;
 }
