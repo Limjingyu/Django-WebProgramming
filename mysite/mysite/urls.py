@@ -28,6 +28,6 @@ urlpatterns = [
     path('accounts/register/', UserCreateView.as_view(), name='register'),
     path('accounts/register/done', UserCreateDoneTV.as_view(), name='register_done'),
 
-    path('ent/', include('enterprise.urls', namespace='ent')),
-    path('indi/', include('individual.urls', namespace='indi')),
+    path('ent/', include('enterprise.urls', namespace= 'ent')),
+    path('indi/', include('individual.urls', namespace= 'indi' )),
 ]
