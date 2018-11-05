@@ -24,16 +24,23 @@ class Post(models.Model):
         return self.title
 
     def get_absolute_url(self):
-        return reverse('blog:post_detail', args=(self.slug,))
+        return reverse('individual:post_detail', args=(self.slug,))
 
-    def get_previous_post(self):
-        return self.get_previous_by_modify_date()
+    # def get_previous_post(self):
+    #     return self.get_previous_by_modify_date()
 
-    def get_next_post(self):
-        return self.get_next_by_modify_date()
+    # def get_next_post(self):
+    #     return self.get_next_by_modify_date()
 
-    def save(self, *args, **kwargs):
-        if not self.id:
-            self.slug = slugify(self.title, allow_unicode=True)
+    # def save(self, *args, **kwargs):
+    #     if not self.id:
+    #         self.slug = slugify(self.title, allow_unicode=True)
 
-        super(Post, self).save(*args, **kwargs)
+        # super(Post, self).save(*args, **kwargs)
+
+
+class Request(models.Model):
+    title       = models.CharField('TITLE', max_length=50)
+    description = models.CharField('DESCRIPTION', max_length=100, blank=True, null=True, help_text='Request detail.')
+    create_date = models.DateTimeField('Create Date', auto_now_add=True)
+    content = models.TextField('CONTENT')
