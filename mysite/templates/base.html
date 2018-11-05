@@ -47,7 +47,7 @@
         {% else %}
             <li><a href="{% url 'home' %}">&nbsp;HOME</a></li>
             <li><a href="#">|&nbsp;OUR STORYE</a></li>
-            <li><a href="#">|&nbsp;REQUEST </a></li>
+            <li><a href="{% url 'indi:request_add' %}">|&nbsp;MY REQUEST </a></li>
             <li><a href="#">|&nbsp;MY LIST</a></li>
         {% endif %}
     {% else %}

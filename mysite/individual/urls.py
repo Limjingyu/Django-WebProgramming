@@ -1,8 +1,8 @@
 from django.urls import path
-
+from individual.views import *
 
 app_name = 'indi'
 
 urlpatterns = [
-    # path('list/', EnterpriseLV.as_view(), name='ent_list'),
+    path('request_add', individualCreateView.as_view(), name='request_add'),
 ]
