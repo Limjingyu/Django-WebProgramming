@@ -20,7 +20,7 @@ class Migration(migrations.Migration):
                 ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
                 ('request_date', models.DateTimeField(auto_now=True, verbose_name='Request Date')),
                 ('ent_id', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, related_name='enterprise_id', to=settings.AUTH_USER_MODEL)),
-                ('indi_id', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, related_name='individual_id', to=settings.AUTH_USER_MODEL)),
+                ('individual_id', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, related_name='individual_id', to=settings.AUTH_USER_MODEL)),
             ],
         ),
     ]

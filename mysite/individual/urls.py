@@ -2,6 +2,7 @@ from django.conf.urls import url
 from django.urls import path
 from individual.views import *
 
+
 app_name = 'individual'
 
 urlpatterns = [
@@ -32,6 +33,7 @@ urlpatterns = [
 
     # Example: /search/
     path('post/search/', SearchFormView.as_view(), name='search'),
+   
 
     # path('add/', PostCreateView.as_view(), name='add'),
     # path('change/', PostChangeLV.as_view(), name='change'),

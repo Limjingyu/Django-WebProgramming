@@ -18,7 +18,11 @@ class PostLV(ListView):
     template_name = "individual/post_all.html" # post_list.html
     context_object_name = "posts" # object_list
 
-    paginate_by = 2
+    #paginate_by = 2s
+
+
+   
+
 
 # post_detail.html
 class PostDV(DetailView): # select * from where blog_post where slug=?
@@ -66,7 +70,7 @@ class PostCreateView(LoginRequiredMixin, CreateView):
     model = Post
     fields = ['title', 'slug', 'description', 'content']
     initial = {'slug': 'auto-filling-by-title'}
-    success_url = reverse_lazy('blog:index')
+    success_url = reverse_lazy('individual:index')
 
     def form_valid(self, form): # self.request
         form.instance.owner = self.request.user

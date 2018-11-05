@@ -1,10 +1,11 @@
 from django.urls import path
+from django.conf.urls import url
+from enterprise.views import *
 
-from enterprise.views import EnterpriseLV
-
-app_name = 'ent'
+app_name = 'ent1'
 
 urlpatterns = [
-    # path('list/', EnterpriseLV.as_view(), name='ent_list'),
-    path('request_list/', EnterpriseLV.as_view(), name='ent_request_list'),
+   
+    # path('request_list', EnterpriseLV.as_view(), name='request_list'),
+    path('request_li', EnterpriseLV.as_view(), name='request_list'),
 ]
