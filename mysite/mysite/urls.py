@@ -18,6 +18,8 @@ from django.urls import path, include
 
 from mysite.views import HomeView
 from mysite.views import UserCreateView, UserCreateDoneTV
+from individual.views import *
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -28,6 +30,7 @@ urlpatterns = [
     path('accounts/register/', UserCreateView.as_view(), name='register'),
     path('accounts/register/done', UserCreateDoneTV.as_view(), name='register_done'),
 
-    path('ent/', include('enterprise.urls', namespace= 'ent')),
-    path('indi/', include('individual.urls', namespace= 'indi' )),
+    # path('ent/',include('enterprise.urls', namespace= 'ent')),
+    path('indi/',include('individual.urls', namespace= 'indi' )),
+    # path('request_add', individualCreateView.as_view(), name='request_add'),
 ]

@@ -1,6 +1,6 @@
 from django.urls import path
 from individual.views import *
-from mysite.views import HomeView
+from mysite.views import HomeView, TempView
 
 
 app_name = 'indi'

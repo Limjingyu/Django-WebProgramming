@@ -9,6 +9,10 @@ from django.contrib.auth.decorators import login_required
 class HomeView(TemplateView):
     template_name = "home.html"
 
+class TempView(TemplateView):
+    template_name = "temp.html"
+
+
 class UserCreateView(CreateView):
     template_name = "registration/register.html"
     form_class = UserCreationForm
