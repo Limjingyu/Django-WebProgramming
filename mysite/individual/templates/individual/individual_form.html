@@ -7,7 +7,7 @@
 
     <h1>Individual Request - {{user}}</h1>
 
-    <form action="/indi/request_add" method="post">{% csrf_token%}
+    <form action="/indi/home" method="post">{% csrf_token%}
 
     {% if form.errors %}
     <p class= "errornote">Wrong! Please correct the error(s) below.</p>
